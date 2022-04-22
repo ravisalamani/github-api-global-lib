@@ -1,7 +1,7 @@
 def call(Map config=[:]) {
   def rawBody = libraryResource 'com/planetpope/api/jira/createIssue.json'
   def binding = [
-    key: "${jsonEvent((config.key)}",
+    key: "${jsonEvent(config.key)}",
     summary: "${jsonEvent(config.summary)}",
     description: "${jsonEvent(config.description)}",
     issueTypeName: "${jsonEvent(config.issueTypeName)}"
